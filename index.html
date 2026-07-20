@@ -1,0 +1,110 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brew Haven · coffee website</title>
+    <!-- Font Awesome 6 (free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- external CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast"></div>
+
+    <!-- MAIN APP -->
+    <div class="coffee-shop" id="mainShop">
+
+        <!-- HEADER -->
+        <div class="header">
+            <div class="logo">
+                <i class="fas fa-mug-hot"></i>
+                <span>Brew Haven</span>
+            </div>
+            <div class="nav-actions">
+                <span class="cart-badge" id="cartBadge">
+                    <i class="fas fa-cart-shopping"></i>
+                    <span id="cartCount">0</span>
+                </span>
+                <div class="nav-icon" id="themeToggle" title="toggle vibe">
+                    <i class="fas fa-sun"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- HERO -->
+        <div class="hero">
+            <h1>craft <span>coffee</span> <br />for your soul</h1>
+            <p>freshly roasted · ethically sourced · brewed with love</p>
+            <div class="cta-group">
+                <button class="btn btn-primary" id="orderBtn"><i class="fas fa-mug-saucer"></i> order now</button>
+                <button class="btn btn-outline" id="menuToggle"><i class="fas fa-list"></i> hide menu</button>
+            </div>
+        </div>
+
+        <!-- MENU -->
+        <div class="menu-section" id="menuSection">
+            <h2 class="section-title"><i class="fas fa-coffee"></i> our signature blends</h2>
+            <div class="menu-grid" id="menuGrid">
+                <!-- injected by JS -->
+            </div>
+        </div>
+
+        <!-- ORDER PANEL -->
+        <div class="order-panel">
+            <div class="panel-left">
+                <div class="panel-header">
+                    <i class="fas fa-cup-togo"></i>
+                    <span>build your brew</span>
+                </div>
+                <div class="brew-controls">
+                    <div class="control-item">
+                        <label>size</label>
+                        <div class="btn-group" id="sizeGroup">
+                            <button class="size-btn" data-size="small">S</button>
+                            <button class="size-btn active" data-size="medium">M</button>
+                            <button class="size-btn" data-size="large">L</button>
+                        </div>
+                    </div>
+                    <div class="control-item">
+                        <label>extras</label>
+                        <div class="extra-group">
+                            <label><input type="checkbox" class="extra-check" value="extra shot" /> <i class="fas fa-bolt"></i> shot</label>
+                            <label><input type="checkbox" class="extra-check" value="oat milk" /> <i class="fas fa-seedling"></i> oat milk</label>
+                            <label><input type="checkbox" class="extra-check" value="caramel" /> <i class="fas fa-droplet"></i> caramel</label>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-add" id="addToCartBtn"><i class="fas fa-plus"></i> add latte to cart</button>
+            </div>
+            <div class="panel-right" id="orderSummary">
+                <div class="summary-header">
+                    <i class="fas fa-receipt"></i>
+                    <span>your order</span>
+                    <button class="btn-clear" id="clearCartBtn"><i class="fas fa-trash"></i></button>
+                </div>
+                <div class="cart-items" id="cartItems">
+                    <div class="empty-cart">☕ no items yet</div>
+                </div>
+                <div class="cart-total">
+                    <span>total</span>
+                    <span id="totalPrice">$0.00</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer-note">
+            <span><i class="fas fa-leaf"></i> 100% arabica</span>
+            <span><i class="fas fa-heart"></i> roasted daily</span>
+            <span><i class="fas fa-mug-hot"></i> <a href="#" id="surpriseBtn">✨</a></span>
+        </div>
+    </div>
+
+    <!-- external JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
